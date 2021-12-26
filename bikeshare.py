@@ -201,6 +201,24 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def trip_duration_stats(df):
+    """Displays statistics on the total and average trip duration."""
+
+    print('\nCalculating Trip Duration...\n')
+    start_time = time.time()
+
+    try:
+        total_travel_time = dt.timedelta(seconds=int(df['Trip Duration'].sum()))
+        print('Total travel time:', total_travel_time)
+
+        mean_travel_time = dt.timedelta(seconds=int(df['Trip Duration'].mean()))
+        print('Average travel time:', mean_travel_time)
+    except KeyError as err:
+        print('\nOops! Calculations involving {} failed because your current city data does not have {} column.'.format(err,err))
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
 
 def main():
     while True:
@@ -213,7 +231,7 @@ def main():
             continue
         else:
             time_stats(df)
-            station_stats(df)
+            station_stats(df)          
         print('\n****Would you like to restart?*****')
         restart = getResponse()
         if restart == 'yes' or restart == 'y':
