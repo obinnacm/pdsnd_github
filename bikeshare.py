@@ -231,7 +231,8 @@ def main():
             continue
         else:
             time_stats(df)
-            station_stats(df)          
+            station_stats(df)
+            trip_duration_stats(df)          
         print('\n****Would you like to restart?*****')
         restart = getResponse()
         if restart == 'yes' or restart == 'y':
