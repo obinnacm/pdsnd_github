@@ -6,6 +6,10 @@
 ### Project Title
 Explore US Bikeshare Data
 
+## Installations
+
+To run this code, Python 3 is needed with Pandas and Numpy packages installed. 
+
 ### Description
 This python script is used to analyze U.S. bikeshare data interactively. The user can choose the data to use and apply month and day filter to analyze.
 
