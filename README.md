@@ -20,4 +20,8 @@ The following files are needed to execute this script:
 | **new_york_city.csv** | File containing New York City Bikeshare data|
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The following sources were consulted for this project:
+
+- [Pandas DatatimeIndex documentation](https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html)
+
+- [Python datetime library documentation](https://docs.python.org/3/library/datetime.html#examples-of-usage-timedelta)
